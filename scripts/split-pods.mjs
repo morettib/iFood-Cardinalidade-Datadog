@@ -1,0 +1,18 @@
+import {cp,mkdir,readFile,writeFile,access} from 'node:fs/promises';
+import {resolve,join,dirname} from 'node:path';
+const root=resolve(import.meta.dirname,'..'),target=resolve(root,'../ifood-kubernetes-telemetry');
+if(dirname(target)!==dirname(root)||target===root)throw Error('Invalid sibling target');
+try{await access(join(target,'package.json'));throw Error('Pods project already exists; refusing overwrite');}catch(e){if(e.code!=='ENOENT')throw e;}
+await mkdir(target,{recursive:true});
+for(const name of ['src','config','scripts','tests'])await mkdir(join(target,name),{recursive:true});
+for(const name of ['AGENTS.md','.gitignore','.postcssrc.mjs','index.html','tsconfig.json','tsconfig.app.json','tsconfig.node.json','vite.config.ts'])await cp(join(root,name),join(target,name));
+for(const name of ['App.tsx','api.ts','domain.ts','useResource.ts','style.css','translations.ts','i18n.tsx'])await cp(join(root,'src',name),join(target,'src',name));
+for(const name of ['package.mjs','pkgutil.mjs'])await cp(join(root,'scripts',name),join(target,'scripts',name));
+for(const name of ['domain.test.ts','ui.test.tsx','uptime.test.tsx','patch014.test.ts','i18n.test.ts'])await cp(join(root,'tests',name),join(target,'tests',name));
+await writeFile(join(target,'src/main.tsx'),`import React from 'react';\nimport {createRoot} from 'react-dom/client';\nimport '@capra/theme/base.css';\nimport '@capra/core/styles.css';\nimport '@capra/icons/styles.css';\nimport './style.css';\nimport App from './App';\nimport {LanguageProvider,useLanguage} from './i18n';\nfunction Workspace(){const {language,setLanguage}=useLanguage();return <><nav className="workspace-nav"><a href="/app-ui/ifood-kubernetes-pov" target="_top">Cardinalidade · abrir app separado</a><label>Idioma / Language<select value={language} onChange={e=>setLanguage(e.target.value as 'pt-BR'|'en')}><option value="pt-BR">PT-BR</option><option value="en">EN</option></select></label></nav><App/></>;}\ncreateRoot(document.getElementById('root')!).render(<React.StrictMode><LanguageProvider><Workspace/></LanguageProvider></React.StrictMode>);\n`);
+const policies=await readFile(join(root,'config/policies.yml'),'utf8');const blocks=policies.split(/(?=  - object:)/).filter(s=>/search\/jobs|prom\/api\/v1\/query/.test(s));await writeFile(join(target,'config/policies.yml'),'policies:\n'+blocks.map(s=>s.replace(/^policies:\n/,'')).join(''));
+const p=JSON.parse(await readFile(join(root,'package.json'),'utf8'));p.name='ifood-kubernetes-telemetry';p.version='1.0.0';p.displayName='iFood — Kubernetes: Telemetria preservada';p.description='Desempenho dos pods e containers com CPU, uptime, eventos e telemetria original no Cribl Search.';delete p.scripts['test:ui'];await writeFile(join(target,'package.json'),JSON.stringify(p,null,2)+'\n');
+const lock=JSON.parse(await readFile(join(root,'package-lock.json'),'utf8'));lock.name=p.name;lock.version=p.version;Object.assign(lock.packages[''],{name:p.name,version:p.version});await writeFile(join(target,'package-lock.json'),JSON.stringify(lock,null,2)+'\n');
+await writeFile(join(target,'README.md'),'# iFood — Kubernetes: Telemetria preservada\n\nConsulte CPU, uptime e eventos dos pods com contexto de namespace, host e container. Este app consulta a telemetria original e não altera rotas, métricas ou tags.\n\nA análise de cardinalidade é oferecida separadamente no app iFood — Cardinalidade Datadog.\n');
+await writeFile(join(target,'tests/test-catalog.yaml'),'tests:\n  - id: ifood-pods-independent-app\n    command: npm test\n    acceptance: CPU, uptime, identity, event correlation, incomplete data and query failures retain their original semantics in the separate Kubernetes app.\n');
+console.log('Created independent Pods source: '+target);

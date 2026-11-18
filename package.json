@@ -1,0 +1,43 @@
+{
+  "name": "ifood-kubernetes-pov",
+  "displayName": "iFood — Cardinalidade Datadog",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "description": "Descubra métricas, investigue labels, simule redução de séries e verifique dependências no Datadog. Kubernetes é um app separado.",
+  "cribl": {
+    "type": "app",
+    "createAppScriptVersion": "0.5.0"
+  },
+  "tags": {
+    "product": [
+      "search",
+      "stream"
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:ui": "playwright test --config tests/browser.config.ts",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "@capra/core": "^1.14.1",
+    "@capra/dx-tokens-postcss-plugin": "^0.4.0",
+    "@capra/icons": "^1.10.0",
+    "@capra/theme": "^1.6.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+policies:
+  - object: '/m/default/jobs'
+    actions: ['POST']
+  - object: '/m/default/jobs/*'
+    actions: ['GET', 'PATCH']
+  - object: '/m/default/system/capture'
+    actions: ['POST']
+  - object: '/m/default_search/search/jobs'
+    actions: ['POST']
+  - object: '/m/default_search/search/jobs/*'
+    actions: ['GET', 'POST']
+  - object: '/products/lakehouse_engine_metrics/engines/ifood_logs/datasets/metrics/prom/api/v1/query_range'
+    actions: ['GET']
+  - object: '/products/lakehouse_engine_metrics/engines/ifood_logs/datasets/metrics/prom/api/v1/query'
+    actions: ['GET']
+  - object: '/products/lakehouse_engine_metrics/engines/ifood_logs/datasets/metrics/prom/api/v1/metadata'
+    actions: ['GET']
+  - object: '/products/lakehouse_engine_metrics/engines/ifood_logs/datasets/metrics/metrics/summary'
+    actions: ['GET']
+  - object: '/products/lakehouse_engine_metrics/engines/ifood_logs/datasets/metrics/metrics/*/labels'
+    actions: ['GET']

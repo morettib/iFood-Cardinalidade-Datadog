@@ -1,0 +1,11 @@
+# 0.2.3 — Complete readable Datadog inventories
+
+Removed the 300-monitor and 20-dashboard scan caps. Page monitor and dashboard inventories in groups of 100 until a short terminal page, including an empty last page for exact multiples. Detect duplicate IDs, changing totals and missing definitions rather than claiming complete coverage. Read every listed dashboard in bounded batches of up to 25 on Stream; failed batches fall back to individual reads.
+
+Close the NDJSON capture as soon as every requested endpoint response arrives, avoiding the full multi-Worker capture duration. Require a finished job with the expected event count and one valid response per exact job/endpoint. No credential values, production routing or schedules are introduced.
+
+Retry transient HTTP 429/500/502/503/504 on Stream with bounded exponential backoff and Retry-After support; retry transport and capture failures at the caller. Show live scan progress and preserve dependencies found in completed pages. Stop on cancellation or a 30-minute run deadline. All readable means the configured keys' accessible inventory during the scan; preset dashboards and inaccessible definitions remain outside API coverage.
+
+Validation includes pagination beyond both former caps, dependencies on the last page, terminal empty pages, duplicate detection, unreadable definitions, transient failures, multi-response capture completion and browser progress. Rollback is the retained 0.2.2 archive. Secret folders, Stream destinations, schedules and Datadog definitions are unchanged by this release.
+
+Production verification (2026-11-13 UTC): installed 0.2.3, 45 unit tests and 13 browser tests passed. App-scoped Stream batch successfully read 10 dashboard definitions using deployed custom breaker ifood_datadog_api_json (16 MiB). Full monitor scan plus resumed terminal pages checked 30,491 monitors, with no dependency on the two selected tags for istio.mesh.request.duration.milliseconds observed. Dashboard inventory listed 3,152; 3,150 definitions read, with 50 dashboard dependencies. Both dca-53i-pq2 and wkv-emc-q9i returned upstream HTTP 403 on individual retry. Dashboard coverage remains incomplete until Datadog read authorization is granted; no dashboard or telemetry tag was modified. Final evidence is saved locally in tmp/ifood-audit/pagination-final-audit.json.

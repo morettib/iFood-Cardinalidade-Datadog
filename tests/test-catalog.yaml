@@ -1,0 +1,82 @@
+tests:
+  - id: ifood-cardinality-navigation-only-031
+    command: npm run test:ui -- --grep "catalog does|real Lake measurement"
+    acceptance: Cardinality navigation contains inventory, distribution analysis and language controls; the Kubernetes link is absent on both cardinality views.
+  - id: ifood-dynamic-catalog-and-native-simulation-030
+    command: npm test
+    acceptance: Dynamic metric names, server catalog and lazy label counts; native joint simulation preserves host and histogram bounds; cache expiry, partial API results and malformed counts fail closed; Datadog endpoints remain read-only and bounded.
+  - id: ifood-separate-apps-and-native-flow-030
+    command: npm run test:ui
+    acceptance: Cardinality opens on metric inventory; native Argo metric can be found and diagnosed; values load on demand; protected dimensions cannot be selected; joint simulation and Datadog review are separated; Kubernetes links to its independent app.
+  - id: ifood-zero-individual-reduction-explained-029
+    command: npm test
+    acceptance: 125 combinations remain 125 for correlated individual tags; combined removal recalculates exact collapse; host remains a dimension; distinct tag values and simulated JSON-byte reduction remain separate from combination count and measured ingestion.
+  - id: ifood-expanded-evidence-and-language-028
+    command: npm test
+    acceptance: Notebook and template pagination, change-aware snapshots, bounded batches and fallback; metric/time-slice SLO queries; indexing include/exclude is context rather than usage; legacy three-source negatives stay pending; safe HTTP-only error reporting and PT-BR/EN evidence semantics.
+  - id: ifood-opportunity-first-bilingual-ui-028
+    command: npm run test:ui
+    acceptance: Primary ranking contains only verified no-use scenarios; dependency and pending scenarios are separated; default tag list shows verified unused tags; PT-BR/EN preference persists and switching preserves selection/evidence without creating jobs; expanded source cards and indexing context remain distinct.
+  - id: ifood-cumulative-tag-selection-027
+    command: npm run test:ui
+    acceptance: Adding a second tag preserves the first; joint cardinality is recalculated rather than adding individual savings; search and filters preserve selection; toggling and clearing update the simulation and dependency checks.
+  - id: ifood-visible-unused-tags-026
+    command: npm run test:ui
+    acceptance: Every observed single tag appears in a searchable table with dependency classification, reference details and simulated reduction; incomplete or historical negatives remain pending; verified negatives are listed as no usage observed; selecting a row updates the simulation.
+  - id: ifood-guided-cardinality-scope-025
+    command: npm run test:ui
+    acceptance: Global analysis cannot produce a review candidate; narrow scope with complete current evidence can; dependency references remain expandable; global comparison cannot validate a historical pilot; Portuguese workflow and persisted results remain functional.
+  - id: ifood-lakehouse-datadog-cardinality-comparison-024
+    command: npm test
+    acceptance: Queries exact metric from datadog_sketches; one-hour Datadog volumes; safe estimator tag paths including slash keys; preserves host and sketch records; rejects wrong metric/type, missing counts and false zero for distributions; failures remain distinct from empty.
+  - id: ifood-cardinality-comparison-ui-024
+    command: npm run test:ui
+    acceptance: Shows Lakehouse combinations, Datadog cardinality and before/after estimates with separate definitions; preserves cached comparison on reload; dependency summary links to details; real ingestion remains explicitly unverified.
+  - id: ifood-usage-kv-incremental-024
+    command: npm test
+    acceptance: JSON text/plain KV round trip; canonical metric/tag isolation; invalid history rejected; failed writes preserve published snapshots; unchanged dashboards reused, changed/failed/expired definitions reread, deleted definitions removed; historical negatives remain unverified.
+  - id: ifood-portuguese-usage-history-024
+    command: npm run test:ui
+    acceptance: Portuguese interface and pt-BR document; reload reads saved usage without Stream jobs; incremental refresh skips unchanged dashboard details and reads the changed definition; history dates and coverage visible; Pods and cardinality regressions pass.
+  - id: ifood-datadog-full-pagination-023
+    command: npm test
+    acceptance: More than 300 monitors and 100 dashboards paged to exhaustion; last-page dependencies retained; duplicate IDs and missing details keep incomplete coverage; transient HTTP errors retried; live progress and cancellation preserved.
+  - id: ifood-datadog-global-secret-stream-022
+    command: npm test
+    acceptance: Both global secrets resolved only on Stream; exact job capture registered before resume; foreign or missing responses and failed jobs rejected; no KV credential reads; known read paths only; no schedule or production routing.
+  - id: ifood-cardinality-decision-screen
+    command: npm run test:ui
+    acceptance: Real MCP Lake replay gives 3296→3169; mocked Datadog success, dependency, 403 and incomplete scans remain distinct; narrow/mobile review, partial Lake coverage, failed query and Pods regressions pass.
+  - id: ifood-cardinality-canonical-multiple-tags-partial
+    command: npm test
+    acceptance: Full tag values and host preserved; reordered tags collapse; multiple removals exact; byte simulation matches optimized ranking; partial/invalid/truncated Lake input not complete.
+  - id: ifood-datadog-dependency-coverage
+    command: npm test
+    acceptance: Exact metric names, active tags, variable prefixes, read success, 403 and capped scans produce distinct evidence states; no client credentials.
+  - id: ifood-cardinality-pilot-review
+    command: npm test
+    acceptance: Disabled exact-metric/scope Eval removes only intended tags and preserves distribution payload; rollback and missing evidence gates present.
+  - id: ifood-relative-refresh-and-fixed-bounds
+    command: npm run test:ui
+    acceptance: Clock moves from 18:43 to 18:46; all five queries share 18:31–18:46 UTC; fixed historical refresh unchanged; delayed responses cannot overwrite selection.
+  - id: ifood-interval-discovery-cpu-evidence-and-overflow
+    command: npm test
+    acceptance: Disappeared pod retained; 24 CPU conflicts with maximum/source evidence; 101 sentinel caps at 100; null/empty timestamps rejected; cross-midnight dates visible.
+  - id: ifood-merchant-uptime-source-variants
+    command: npm test
+    acceptance: Three containers with four conflicts retain seven source histories; container IDs, exact duplicates, valid consensus history and unresolved same-source gaps preserved.
+  - id: ifood-dark-pods-interactions
+    command: npm run test:ui
+    acceptance: Dark page and selector text, keyboard selection, source variants, warning filter, safe message formatting, empty/error states, narrow viewport and rapid resource changes.
+  - id: ifood-search-rest-absolute-time
+    command: npm test
+    acceptance: Search jobs serialize absolute UTC dates as numeric Unix seconds; invalid dates never submit a job.
+  - id: ifood-native-metrics-and-timeline
+    command: npm test
+    acceptance: Literal CPU cores query; prefiltered KQL; 10 populated events and successful empty chat timeline.
+  - id: ifood-cluster-pod-correlation
+    command: npm test
+    acceptance: Missing or conflicting inventory does not assign a cluster; mismatched events excluded.
+  - id: ifood-container-incarnation-and-query-failures
+    command: npm test
+    acceptance: Container IDs retained, ambiguous points omitted, HTTP403 distinct from HTTP422 and failed execution distinct from empty.

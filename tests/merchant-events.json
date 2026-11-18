@@ -1,0 +1,154 @@
+[
+  {
+    "_time": 1794500056.511,
+    "event_time": 1794500004,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n1 **FailedScheduling**: 0/36 nodes are available: 10 Insufficient memory, 22 node(s) had untolerated taint(s), 4 Insufficient cpu. no new claims to deallocate, preemption: 0/36 nodes are available: 14 No preemption victims found for incoming pod, 22 Preemption is not helpful for scheduling.\n \n _Events emitted by the default-scheduler seen at 2026-11-12 16:13:24 +0000 UTC since 2026-11-12 16:13:24 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500036.433,
+    "event_time": 1794500011,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n119 **FailedScheduling**: 0/36 nodes are available: 10 Insufficient memory, 22 node(s) had untolerated taint(s), 4 Insufficient cpu. no new claims to deallocate, preemption: 0/36 nodes are available: 14 No preemption victims found for incoming pod, 22 Preemption is not helpful for scheduling.\n \n _Events emitted by the default-scheduler seen at 2026-11-12 16:13:31 +0000 UTC since 2026-11-12 16:13:24 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500058.735,
+    "event_time": 1794500033,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n25 **FailedScheduling**: 0/36 nodes are available: 10 Insufficient memory, 22 node(s) had untolerated taint(s), 4 Insufficient cpu. no new claims to deallocate, preemption: 0/36 nodes are available: 14 No preemption victims found for incoming pod, 22 Preemption is not helpful for scheduling.\n \n _Events emitted by the default-scheduler seen at 2026-11-12 16:13:53 +0000 UTC since 2026-11-12 16:13:24 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500056.952,
+    "event_time": 1794500033,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n180 **FailedScheduling**: 0/36 nodes are available: 10 Insufficient memory, 22 node(s) had untolerated taint(s), 4 Insufficient cpu. no new claims to deallocate, preemption: 0/36 nodes are available: 14 No preemption victims found for incoming pod, 22 Preemption is not helpful for scheduling.\n \n _Events emitted by the default-scheduler seen at 2026-11-12 16:13:53 +0000 UTC since 2026-11-12 16:13:24 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500123.749,
+    "event_time": 1794500077,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n1 **Pulling**: Pulling image \"hashicorp/vault:1.20.1\"\n 1 **Scheduled**: Successfully assigned search-platform/search-merchant-worker-577559b985-bssqz to ip-10-55-253-149.ec2.internal\n \n _Events emitted by the default-scheduler seen at 2026-11-12 16:14:37 +0000 UTC since 2026-11-12 16:14:37 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500111.269,
+    "event_time": 1794500094,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n4 **Created**: Container created\n 2 **Pulled**: Container image \"docker.io/istio/proxyv2:1.29.2\" already present on machine and can be accessed by the pod\n 1 **Pulled**: Successfully pulled image \"hashicorp/vault:1.20.1\" in 4.053s (4.053s including waiting). Image size: 186266184 bytes.\n 1 **Pulled**: Successfully pulled image \"[image]\" in 3.085s (3.085s including waiting). Image size: 19646613 bytes.\n 1 **Pulling**: Pulling image \"hashicorp/consul-template:0.32.0\"\n 1 **Pulling**: Pulling image \"[image]\"\n 4 **Started**: Container started\n \n _Events emitted by the kubelet seen at 2026-11-12 16:14:54 +0000 UTC since 2026-11-12 16:14:54 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500124.074,
+    "event_time": 1794500101,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n1 **Created**: Container created\n 1 **Pulled**: Successfully pulled image \"hashicorp/consul-template:0.32.0\" in 6.412s (6.412s including waiting). Image size: 8211720 bytes.\n 1 **Started**: Container started\n \n _Events emitted by the kubelet seen at 2026-11-12 16:15:01 +0000 UTC since 2026-11-12 16:15:01 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500124.074,
+    "event_time": 1794500109,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n1 **Unhealthy**: Liveness probe failed: HTTP probe failed with statuscode: 500\n 10 **Unhealthy**: Readiness probe failed: HTTP probe failed with statuscode: 500\n \n _Events emitted by the kubelet seen at 2026-11-12 16:15:09 +0000 UTC since 2026-11-12 16:15:02 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500146.249,
+    "event_time": 1794500111,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n2 **Unhealthy**: Liveness probe failed: HTTP probe failed with statuscode: 500\n \n _Events emitted by the kubelet seen at 2026-11-12 16:15:11 +0000 UTC since 2026-11-12 16:15:06 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500311.339,
+    "event_time": 1794500304,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n1 **Unhealthy**: Liveness probe failed: Get \"[endpoint]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\n 1 **Unhealthy**: Readiness probe failed: Get \"[endpoint]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\n \n _Events emitted by the kubelet seen at 2026-11-12 16:18:24 +0000 UTC since 2026-11-12 16:18:24 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500327.094,
+    "event_time": 1794500311,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n1 **Killing**: Container search-merchant-worker failed liveness probe, will be restarted\n \n _Events emitted by the kubelet seen at 2026-11-12 16:18:31 +0000 UTC since 2026-11-12 16:18:31 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  },
+  {
+    "_time": 1794500327.094,
+    "event_time": 1794500319,
+    "title": "Events from the Pod search-platform/search-merchant-worker-577559b985-bssqz",
+    "message": "%%% \n5 **Unhealthy**: Liveness probe failed: Get \"[endpoint]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\n 9 **Unhealthy**: Readiness probe failed: Get \"[endpoint]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\n \n _Events emitted by the kubelet seen at 2026-11-12 16:18:39 +0000 UTC since 2026-11-12 16:18:24 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-08ff4f240df07fcc9",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-merchant-worker-577559b985-bssqz"
+    ]
+  }
+]

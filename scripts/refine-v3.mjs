@@ -1,0 +1,6 @@
+import {readFile,writeFile,cp} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+const root=resolve(import.meta.dirname,'..');
+let text=await readFile(join(root,'src/translations.ts'),'utf8');text=text.replace("'Ação':'Action',",'');await writeFile(join(root,'src/translations.ts'),text);await cp(join(root,'src/translations.ts'),join(root,'../ifood-kubernetes-telemetry/src/translations.ts'));
+text=await readFile(join(root,'src/NativeMetricAnalysis.tsx'),'utf8');text=text.replace('{n(l.distinct)}','{l.distinct!=null?n(l.distinct):"—"}');await writeFile(join(root,'src/NativeMetricAnalysis.tsx'),text);
+for(const dir of [root,resolve(root,'../ifood-kubernetes-telemetry')]){const p=JSON.parse(await readFile(join(dir,'package.json'),'utf8'));if(dir===root){p.displayName='iFood — Cardinalidade Datadog';p.description='Descubra métricas, investigue labels, simule redução de séries e verifique dependências no Datadog. Kubernetes é um app separado.';}const lock=JSON.parse(await readFile(join(dir,'package-lock.json'),'utf8'));Object.assign(lock.packages[''],{name:p.name,version:p.version});await writeFile(join(dir,'package.json'),JSON.stringify(p,null,2)+'\n');await writeFile(join(dir,'package-lock.json'),JSON.stringify(lock,null,2)+'\n');}

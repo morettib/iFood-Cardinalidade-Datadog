@@ -1,0 +1,11 @@
+import {LanguageProvider} from './i18n';
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import '@capra/theme/base.css';
+import '@capra/core/styles.css';
+import '@capra/icons/styles.css';
+import './style.css';
+import './cardinality.css';
+import './catalog.css';
+import App from './Workspace';
+createRoot(document.getElementById('root')!).render(<React.StrictMode><LanguageProvider><App/></LanguageProvider></React.StrictMode>);

@@ -1,0 +1,56 @@
+[
+  {
+    "metric": {
+      "host": "i-08ff4f240df07fcc9",
+      "kube_namespace": "search-platform",
+      "pod_name": "search-merchant-worker-577559b985-bssqz",
+      "container_name": "istio-proxy",
+      "container_id": "f6770e3a12d3f755b2242591aec4cee502fe3fc0bd02abcfcd9f59889d431978"
+    },
+    "values": [
+      [
+        1794500160,
+        "0.008375804462780767"
+      ],
+      [
+        1794500220,
+        "0.008375804462780767"
+      ],
+      [
+        1794500280,
+        "0.008375804462780767"
+      ],
+      [
+        1794500340,
+        "0.008375804462780767"
+      ]
+    ]
+  },
+  {
+    "metric": {
+      "host": "i-08ff4f240df07fcc9",
+      "kube_namespace": "search-platform",
+      "pod_name": "search-merchant-worker-577559b985-bssqz",
+      "container_name": "search-merchant-worker",
+      "container_id": "6c8e8545be8e97b33ca16d34d757eaad7eb1f59ba324cb3a1d034ac9fccc383a"
+    },
+    "values": [
+      [
+        1794500160,
+        "0.11419228020090888"
+      ],
+      [
+        1794500220,
+        "0.11419228020090888"
+      ],
+      [
+        1794500280,
+        "0.11419228020090888"
+      ],
+      [
+        1794500340,
+        "0.11419228020090888"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,2 @@
+# Datadog reads run on Stream Workers using Global Secrets. No external App proxy is required.
+{}

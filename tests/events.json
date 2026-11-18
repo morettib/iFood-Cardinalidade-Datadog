@@ -1,0 +1,132 @@
+﻿[
+    {
+        "_time":  1794498931.141,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "warning",
+        "event_time":  1794498919,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794499171.19,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "info",
+        "event_time":  1794499148,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794499283.799,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "warning",
+        "event_time":  1794499257,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794499517.003,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "info",
+        "event_time":  1794499491,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794499573.915,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "warning",
+        "event_time":  1794499553,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794499811.599,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "info",
+        "event_time":  1794499786,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794499831.081,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "warning",
+        "event_time":  1794499816,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794500151.613,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "info",
+        "event_time":  1794500132,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794500151.613,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "warning",
+        "event_time":  1794500137,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    },
+    {
+        "_time":  1794500276.365,
+        "message":  "Kubernetes event (sanitized fixture)",
+        "tags":  [
+                     "host_provider_id:i-0aab96982e6a2bbb3",
+                     "kube_cluster_name:local-comm-sandbox-use1-01",
+                     "kube_namespace:search-platform",
+                     "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+                 ],
+        "level":  "info",
+        "event_time":  1794500254,
+        "title":  "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p"
+    }
+]

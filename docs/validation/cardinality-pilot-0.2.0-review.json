@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "status": "Review draft — not deployed",
+  "metric": "istio.mesh.request.duration.milliseconds",
+  "scope": {
+    "key": "kube_namespace",
+    "value": "istio-system"
+  },
+  "window": {
+    "start": "2026-11-12T15:02:00Z",
+    "end": "2026-11-12T15:10:00Z"
+  },
+  "observedImpact": {
+    "remove": [
+      "pod_name"
+    ],
+    "before": 153,
+    "after": 104,
+    "reduction": 49,
+    "percent": 32.02614379084967,
+    "records": 972,
+    "tagBytesBefore": 1968249,
+    "tagBytesAfter": 1912899
+  },
+  "usage": "Usage unverified",
+  "coverage": "complete",
+  "gates": [
+    "Resolve dependency evidence with owners",
+    "Verify Eval on a Stream preview; distribution/sketch serialization and Datadog acceptance must pass before enabling"
+  ],
+  "proposedFunction": {
+    "id": "eval",
+    "disabled": true,
+    "filter": "typeof sketch !== 'undefined' && sketch != null && sketch.metric === \"istio.mesh.request.duration.milliseconds\" && Array.isArray(sketch.tagsList) && sketch.tagsList.includes(\"kube_namespace:istio-system\")",
+    "description": "Pilot draft: edit only sketch.tagsList in Datadog-only output pipeline; retain all sketch points",
+    "conf": {
+      "add": [
+        {
+          "name": "sketch.tagsList",
+          "value": "JSON.parse(JSON.stringify(sketch.tagsList).replace(/\"(?:pod_name):(?:\\\\.|[^\"\\\\])*\"(?:,|(?=\\]))|(\"(?:\\\\.|[^\"\\\\])*\")/g, '$1').replace(/,\\]$/, ']'))"
+        }
+      ]
+    }
+  },
+  "attach": "Append after review to the Datadog-only pipeline on datadog-agent-intake → ifood-sandbox-datadog. Preserve existing health-prune functions. Do not use the common input pipeline or replace the source connections.",
+  "retain": "Leave datadog-agent-intake → ifood_datadog without this transformation. Query original sketches in Cribl Search dataset ifood_datadog.",
+  "originalDetailQuery": "dataset=\"ifood_datadog\"\n| where tostring(sketch.metric) == \"istio.mesh.request.duration.milliseconds\"\n| where tostring(sketch.tagsList) contains \"\\\"kube_namespace:istio-system\\\"\"\n| project _time, metric=sketch.metric, host=sketch.host, tags=sketch.tagsList, dogsketches=sketch.dogsketchesList, distributions=sketch.distributionsList\n| limit 101",
+  "rollback": "Disable/remove only the new Eval and restore the saved Datadog-only pipeline revision. Keep Lake unchanged; verify original tag coverage resumes.",
+  "validation": [
+    "Capture immutable pipeline/source revision and same-window baseline before approval",
+    "Preview: only exact metric + original scope changes; nonpilot events unchanged; dogsketchesList/distributionsList deep-equal; cnt/kList/nList/ts/min/max/sum retained",
+    "Verify native fan-out isolation: the Datadog-only transformation must not mutate tags or points in the original Lake branch",
+    "Compare distinct metric + host + canonical remaining tags before/after on a matching pilot window",
+    "Measure real compressed/uncompressed outbound bytes from Datadog destination; tag-array JSON-byte simulation is not outbound volume",
+    "Compare Datadog-reported ingested/indexed volume with correct lookback and billing terms; do not infer savings from combinations",
+    "Validate original and transformed copies of the same capture in isolated baseline/pilot canary metrics or a test org after verifying serialization; compare sum(cnt), point counts, p95 and p99 over identical timestamps and retained dimensions. Colliding tag sets must merge without last-write sample loss. Do not double-send the same production metric or average sketch percentiles",
+    "Replay linked monitors/dashboards/variables and obtain owner sign-off; stop and roll back on missing data, percentiles outside approved tolerance, or delivery errors"
+  ],
+  "evidence": []
+}

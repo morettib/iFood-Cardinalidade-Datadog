@@ -1,0 +1,132 @@
+[
+  {
+    "_time": 1794498931.141,
+    "event_time": 1794498919,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n753 **Unhealthy**: Readiness probe failed: Get \"[endpoint]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\n \n _Events emitted by the kubelet seen at 2026-11-12 15:55:19 +0000 UTC since 2026-11-12 09:48:42 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794499171.19,
+    "event_time": 1794499148,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n75 **Killing**: Container search-cook-grpc failed liveness probe, will be restarted\n \n _Events emitted by the kubelet seen at 2026-11-12 15:59:08 +0000 UTC since 2026-11-12 09:45:47 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794499283.799,
+    "event_time": 1794499257,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n206 **BackOff**: Back-off restarting failed container search-cook-grpc in pod search-cook-grpc-6cbd9c9b98-6hx4p_search-platform(a69545b9-f599-4f4d-a783-22e8be7d3919)\n \n _Events emitted by the kubelet seen at 2026-11-12 16:00:57 +0000 UTC since 2026-11-12 10:03:39 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794499517.003,
+    "event_time": 1794499491,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n75 **Pulled**: Container image \"[image]\" already present on machine and can be accessed by the pod\n \n _Events emitted by the kubelet seen at 2026-11-12 16:04:51 +0000 UTC since 2026-11-12 09:47:24 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794499573.915,
+    "event_time": 1794499553,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n773 **Unhealthy**: Readiness probe failed: Get \"[endpoint]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\n \n _Events emitted by the kubelet seen at 2026-11-12 16:05:53 +0000 UTC since 2026-11-12 09:48:42 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794499811.599,
+    "event_time": 1794499786,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n77 **Killing**: Container search-cook-grpc failed liveness probe, will be restarted\n \n _Events emitted by the kubelet seen at 2026-11-12 16:09:46 +0000 UTC since 2026-11-12 09:45:47 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794499831.081,
+    "event_time": 1794499816,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n325 **Unhealthy**: Readiness probe failed: HTTP probe failed with statuscode: 500\n \n _Events emitted by the kubelet seen at 2026-11-12 16:10:16 +0000 UTC since 2026-11-12 09:45:13 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794500151.613,
+    "event_time": 1794500132,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n77 **Pulled**: Container image \"[image]\" already present on machine and can be accessed by the pod\n \n _Events emitted by the kubelet seen at 2026-11-12 16:15:32 +0000 UTC since 2026-11-12 09:47:24 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794500151.613,
+    "event_time": 1794500137,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n129 **Unhealthy**: Liveness probe failed: HTTP probe failed with statuscode: 500\n \n _Events emitted by the kubelet seen at 2026-11-12 16:15:37 +0000 UTC since 2026-11-12 09:45:12 +0000 UTC_ \n\n %%%",
+    "level": "warning",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  },
+  {
+    "_time": 1794500276.365,
+    "event_time": 1794500254,
+    "title": "Events from the Pod search-platform/search-cook-grpc-6cbd9c9b98-6hx4p",
+    "message": "%%% \n1 **Evicted**: Evicted pod: Forceful Termination\n \n _Events emitted by the karpenter seen at 2026-11-12 16:17:34 +0000 UTC since 2026-11-12 16:17:34 +0000 UTC_ \n\n %%%",
+    "level": "info",
+    "tags": [
+      "host_provider_id:i-0aab96982e6a2bbb3",
+      "kube_cluster_name:local-comm-sandbox-use1-01",
+      "kube_namespace:search-platform",
+      "pod_name:search-cook-grpc-6cbd9c9b98-6hx4p"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+import {useLanguage,translate} from './i18n';
+import {usageState,type Evidence,type Impact} from './cardinality';
+
+export default function OpportunityRanking({ranked,evidence,selected,onSelect}:{ranked:Impact[];evidence:Evidence[];selected:string[];onSelect:(tags:string[])=>void}){const {language}=useLanguage();const number=(n:number)=>n.toLocaleString(language==='en'?'en-US':'pt-BR',{maximumFractionDigits:2});
+ const positive=ranked.filter(r=>r.reduction>0);
+ const opportunities=positive.filter(r=>usageState(evidence,r.remove)==='Nenhum uso observado no escopo verificado');
+ const dependencies=positive.filter(r=>usageState(evidence,r.remove)==='Dependência encontrada');
+ const pending=positive.filter(r=>usageState(evidence,r.remove)==='Uso não verificado');
+ function render(items:Impact[]){return <div className="rank-list">{items.slice(0,10).map((r,i)=><button key={r.remove.join()} className={selected.join()===r.remove.join()?'rank-row chosen':'rank-row'} onClick={()=>onSelect(r.remove)}><span className="rank-number">{i+1}</span><span><strong>{r.remove.join(' + ')}</strong><small>{number(r.before)} → {number(r.after)}{translate(" combinações · ",language)}{translate(usageState(evidence,r.remove),language)}</small></span><span className="rank-impact"><strong>−{number(r.reduction)}</strong><small>{number(r.percent)}%</small></span></button>)}</div>;}
+ return <section className="metric-panel" aria-label={translate("Oportunidades sem uso observado",language)}><div className="panel-heading"><div><p className="eyebrow">{translate("Uso verificado primeiro · impacto depois",language)}</p><h2>{translate("1 · Oportunidades sem uso observado",language)}</h2></div></div><p className="panel-note">{translate("Somente cenários cujas tags não têm referências na cobertura completa e atual do Datadog. Ordenados pela redução simulada de combinações no Cribl. Ainda exigem revisão antes de remover tags.",language)}</p>
+ {opportunities.length?render(opportunities):<p role="status">{translate("Nenhuma oportunidade confirmada nesta verificação. Tags com dependências ou cobertura pendente não entram neste ranking.",language)}</p>}
+ <details aria-label={translate("Cenários com dependências",language)}><summary>{translate("Com dependências no Datadog · ",language)}{dependencies.length}{translate(" cenários · revisão necessária",language)}</summary><p>{translate("Há uso identificado. Estes cenários mostram apenas impacto matemático; não são oportunidades de remoção.",language)}</p>{dependencies.length?render(dependencies):<p>{translate("Nenhum cenário com dependência encontrada.",language)}</p>}</details>
+ <details aria-label={translate("Cenários pendentes",language)}><summary>{translate("Verificação pendente · ",language)}{pending.length}{translate(" cenários · sem conclusão de uso",language)}</summary><p>{translate("Não há evidência completa e atual de ausência de uso. Conclua a verificação antes de considerar a remoção.",language)}</p>{pending.length?render(pending):<p>{translate("Nenhum cenário pendente.",language)}</p>}</details>
+ </section>;
+}
